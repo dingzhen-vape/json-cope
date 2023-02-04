@@ -1,2 +1,2 @@
-# akebi-json-cope
+# json-cope
 Fix Some Bug
