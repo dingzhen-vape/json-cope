@@ -6,7 +6,7 @@ import time
 while True:
     是否重命名 = input("Y：重命名，N：筛选,请输入你的指示：")
     # 要求路径
-    路径 = r"D:\akebi-gc-v0.8-g2.8-binaries-chinese\teleports" #input("输入路径:")
+    路径 = input("输入路径:")
     # 计时
     筛选数 = 0
     # 算距离
