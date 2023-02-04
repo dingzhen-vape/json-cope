@@ -39,17 +39,17 @@ while True:
             print("删除文件夹失败，请手动删除")
             time.sleep(1)
             sys.exit()
-    # 算大致时间
+
     try:
         文件树 = os.listdir(路径)
     except:
         print("路径错误")
     文件数量 = len(文件树)
-    大致时间 = 0.0011064728141934 * 文件数量
-    print(f"大致需要时间{大致时间}秒")
     time.sleep(1)
     # 筛选
     if 是否重命名 == "N" or 是否重命名 == "n":
+        大致时间 = 0.0748548653880734 * 文件数量
+        print(f"大致需要时间{大致时间}秒")
         筛选距离 = input("请输入筛选的距离(请不要输入其他字符）：")
         开始计时 = time.time()
         for i in range(0, 文件数量):
@@ -97,6 +97,8 @@ while True:
     # 重命名
     if 是否重命名 == "Y" or 是否重命名 == "y":
         文件名 = input("输入要替换的名称:")
+        大致时间 = 0.0014271645449051 * 文件数量
+        print(f"大致需要时间{大致时间}秒")
         开始计时 = time.time()
         遍历文件 = os.walk(路径)
         for i in range(0, 文件数量):
@@ -127,6 +129,8 @@ while True:
     if 是否重命名 == "R" or 是否重命名 == "r":
         开始计时 = time.time()
         f = os.walk(路径)
+        大致时间 = 0.0014081797688748 * 文件数量
+        print(f"大致需要时间{大致时间}秒")
         for i in f:
             # 文件名
             a = i[2]
@@ -152,7 +156,7 @@ while True:
                     x2 = x.replace("'", '"')
                     Name = str(x1)
                     # 随机一个数字以达成随机分布
-                    随机数字 = str(random.getrandbits(20))
+                    随机数字 = str(random.getrandbits(200))
                     opening = open(path, encoding="UTF-8", mode="w")
                     # 改json内部的名字
                     opening.write(x2.replace(Name, 随机数字))
@@ -172,7 +176,7 @@ while True:
                         x1 = 内容["name"]
                         x2 = x.replace("'", '"')
                         Name = str(x1)
-                        随机数字 = str(random.getrandbits(20))
+                        随机数字 = str(random.getrandbits(200))
                         opening = open(f"{path1}\\{a[js]}", encoding="UTF-8", mode="w")
                         opening.write(x2.replace(Name, 随机数字))
                         opening.close()
