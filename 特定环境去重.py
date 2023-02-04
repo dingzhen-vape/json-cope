@@ -43,7 +43,7 @@ while True:
     if 是否重命名 == "N" or 是否重命名 == "n":
         筛选距离 = input("请输入筛选的距离(请不要输入其他字符）：")
         开始计时 = time.time()
-        for i in range(1, 文件数量):
+        for i in range(0, 文件数量):
             当前文件 = 文件树[i]
             if str(文件树[i]).count(".json") == 1:
                 try:
@@ -52,7 +52,7 @@ while True:
                         坐标1 = json内容["position"]
                         x1 = 坐标1[0]
                         y1 = 坐标1[2]
-                    for x in range(2, 文件数量):
+                    for x in range(1, 文件数量):
                         下一个文件 = 文件树[x]
                         if 当前文件 == 下一个文件:
                             pass
