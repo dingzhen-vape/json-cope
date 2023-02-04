@@ -41,7 +41,7 @@ while True:
     print(f"大致需要时间{大致时间}秒")
     time.sleep(3)
     # 筛选
-    if 是否重命名 == "N":
+    if 是否重命名 == "N" or 'n':
         筛选距离 = input("请输入筛选的距离(请不要输入其他字符）：")
         开始计时 = time.time()
         for i in range(0, 文件数量):
@@ -82,7 +82,7 @@ while True:
                 break
         print(f"筛选出{筛选数}个文件")
     # 重命名
-    if 是否重命名 == "Y":
+    if 是否重命名 == "Y" or 'y':
         文件名 = input("输入要替换的名称:")
         开始计时 = time.time()
         遍历文件 = os.walk(路径)
